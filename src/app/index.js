@@ -1,11 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from './app'
+import myContext from './context'
 
-const App = ()=>{
+const MyApp= ()=>{
+
+    const state = {
+        name: "gourab"
+    }
     return (
-        <h1>Hello World</h1>
+        <myContext.Provider value={{name:state.name}}>
+            <App/>
+        </myContext.Provider>
+      
     )
 }
 
 
-ReactDOM.render(<App />,document.getElementById("root"))
+ReactDOM.render(<MyApp />,document.getElementById("root"))
