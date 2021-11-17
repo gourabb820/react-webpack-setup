@@ -21,7 +21,8 @@ var config = {
                 }
             }
         ]
-    }
+    },
+    devtool: "incline-source-maps"
 };
 
 module.exports = config;
